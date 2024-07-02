@@ -6,3 +6,13 @@ const fibs = (num) => {
   }
   return result;
 };
+
+//fibonacci sequence using recursion
+const fibsRec = (num) => {
+  if (num === 1) return [0];
+  if (num === 2) return [0, 1];
+
+  const result = fibsRec(num - 1);
+  result.push(result[result.length - 1] + result[result.length - 2]);
+  return result;
+};
